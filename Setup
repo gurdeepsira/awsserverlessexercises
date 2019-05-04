@@ -1,0 +1,30 @@
+Setup
+
+Go to the AWS Management Console, click Services then select Cloud9 under Developer Tools.
+
+Click Create environment.
+
+Enter Development into Name and optionally provide a Description.
+
+Click Next step.
+
+You may leave Environment settings at their defaults of launching a new t2.micro EC2 instance which will be paused after 30 minutes of inactivity.
+
+Click Next step.
+
+Review the environment settings and click Create environment. It will take several minutes for your environment to be provisioned and prepared.
+
+Once ready, your IDE will open to a welcome screen. Below that, you should see a terminal prompt.
+
+You can run AWS CLI commands in here just like you would on your local computer. Verify that your user is logged in by running aws sts get-caller-identity.
+
+aws sts get-caller-identity
+You'll see output indicating your account and user information:
+
+ec2-user:~/environment $ aws sts get-caller-identity
+{
+    "Account": "123456789012",
+    "UserId": "AKIAI44QH8DHBEXAMPLE",
+    "Arn": "arn:aws:iam::123456789012:user/Alice"
+}
+Keep your AWS Cloud9 IDE opened in a tab throughout this workshop.
